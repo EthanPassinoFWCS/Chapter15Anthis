@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
 
+# Choose Style
+plt.style.use('dark_background')
+
 fix, ax = plt.subplots()
 ax.plot(input_values, squares, linewidth=3)
 
