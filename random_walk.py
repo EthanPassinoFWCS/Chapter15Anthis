@@ -1,4 +1,6 @@
 from random import choice
+
+
 class RandomWalk:
 
     def __init__(self, num_points=5000):
