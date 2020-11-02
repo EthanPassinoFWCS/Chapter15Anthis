@@ -5,11 +5,11 @@ from die import Die
 # Create a D6
 
 die_1 = Die()  # Creating a six sided die
-die_2 = Die()
+die_2 = Die(10)
 
 # Make rolls and store the results in a list.
 results = []
-for roll_num in range(1000):
+for roll_num in range(50000):
     results.append(die_1.roll() + die_2.roll())
 
 # Analyze the results.
@@ -24,5 +24,5 @@ data = [Bar(x=x_values, y=frequencies)]
 
 x_axis_config = {"title": "Result", 'dtick': 1}
 y_axis_config = {"title": "Frequency of Result"}
-my_layout = Layout(title="Results of Rolling two 6 sided dice 1000 times", xaxis=x_axis_config, yaxis=y_axis_config)
-offline.plot({'data': data, 'layout': my_layout}, filename="d6_d6.html")
+my_layout = Layout(title="Results of Rolling one 6 sided dice, one 10 sided dice, a total of 50000 times", xaxis=x_axis_config, yaxis=y_axis_config)
+offline.plot({'data': data, 'layout': my_layout}, filename="d6_d10.html")
