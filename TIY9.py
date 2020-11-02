@@ -23,7 +23,7 @@ die_2 = Die()
 results = [die_1.roll() + die_2.roll() for x in range(1000)]  # List comprehensions.
 
 # Analyze the results.
-frequencies = [x for x in range(2, die_1.num_sides+die_2.num_sides+1)]  # List comprehensions.
+frequencies = [results.count(x) for x in range(2, die_1.num_sides+die_2.num_sides+1)]  # List comprehensions.
 
 # Visualize the results.
 x_values = [x for x in range(2, die_1.num_sides+die_2.num_sides+1)]  # List comprehensions.
